@@ -4,7 +4,7 @@ class AppTextStyle {
   // static const textSizeSmall = 12.83;
   static TextStyle textStyleSmall(double width, Color color) {
     return TextStyle(
-      fontSize: (12.83 / width) * width,
+      fontSize: (12 / width) * width,
       fontWeight: FontWeight.w400,
       height: 1.17,
       color: color,
@@ -13,7 +13,7 @@ class AppTextStyle {
 
   static TextStyle textStyleMedium(double width, Color color) {
     return TextStyle(
-      fontSize: (17.1 / width) * width,
+      fontSize: (16 / width) * width,
       fontWeight: FontWeight.w500,
       height: 1.17,
       color: color,
@@ -22,7 +22,7 @@ class AppTextStyle {
 
   static TextStyle textStyleLarge(double width, Color color) {
     return TextStyle(
-      fontSize: (21.38 / width) * width,
+      fontSize: (20 / width) * width,
       fontWeight: FontWeight.w600,
       height: 1.17,
       color: color,

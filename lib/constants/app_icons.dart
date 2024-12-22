@@ -128,9 +128,18 @@ class AppIcons {
     );
   }
 
-  static Widget back({Color? color, double? height, double? width}) {
+  static Widget arrowBack({Color? color, double? height, double? width}) {
     return SvgPicture.asset(
       "assets/svg/arrow_back_white.svg",
+      color: color,
+      width: width,
+      height: height,
+    );
+  }
+
+  static Widget arrowDown({Color? color, double? height, double? width}) {
+    return SvgPicture.asset(
+      "assets/svg/arrow_down.svg",
       color: color,
       width: width,
       height: height,

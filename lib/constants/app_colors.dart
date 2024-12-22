@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:home_rent/helper/color_converter.dart';
 
 class AppColors {
-  static Color primaryColor = ColorConverter.stringToColor("#0A8ED9");
-  static Color secondaryColor = ColorConverter.stringToColor("#858585");
+  static Color blue = ColorConverter.stringToColor("#0A8ED9");
+  static Color blueLight = ColorConverter.stringToColor("#A0DAFB");
+  static Color greyDark = ColorConverter.stringToColor("#858585");
   static Color grey = ColorConverter.stringToColor("#838383");
   static Color greyLight = ColorConverter.stringToColor("#D4D4D4");
   static Color greyExtraLight = ColorConverter.stringToColor("#F7F7F7");
