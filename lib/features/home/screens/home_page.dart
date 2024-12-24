@@ -9,11 +9,13 @@ import '../../../constants/app_colors.dart';
 import '../../../constants/app_icons.dart';
 import '../../../constants/app_text_style.dart';
 import '../../../constants/fake_api_data.dart';
-import '../widgets/custom_button.dart';
+import '../../../helper/enum_category.dart';
+import '../widgets/category_list.dart';
+import '../widgets/header.dart';
 import '../widgets/item_card.dart';
 import '../widgets/item_slider.dart';
-
-enum Category { apartment, house, villa, hotel }
+import '../widgets/search_and_filter.dart';
+import '../widgets/sub_header.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -228,230 +230,14 @@ class _HomePageState extends State<HomePage> {
           height: height,
           child: Column(
             children: [
-              Container(
-                margin: EdgeInsets.only(
-                  top: height * 0.05,
-                  bottom: 22,
-                  left: width * 0.05,
-                  right: width * 0.05,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Location',
-                          style: AppTextStyle.textStyleSmall(
-                              width, AppColors.grey),
-                        ),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Jakarta',
-                              style: AppTextStyle.textStyleMedium(
-                                  width, Colors.black),
-                            ),
-                            SizedBox(width: width * 0.02),
-                            AppIcons.arrowDown(
-                              height: height * 0.0075, //6.11px
-                              width: width * 0.026, //10px
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                    Badge(
-                      child: AppIcons.notification(
-                        color: AppColors.black,
-                        height: height * 0.0264, //21.5px
-                        width: width * 0.0453, //17px
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(
-                  bottom: height * 0.022,
-                  left: width * 0.05,
-                  right: width * 0.05,
-                ),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: width * 0.75,
-                      child: TextField(
-                        decoration: InputDecoration(
-                          filled: true,
-                          fillColor: AppColors.greyExtraLight2,
-                          prefixIcon: Padding(
-                            padding: EdgeInsets.all(width * 0.04),
-                            child: AppIcons.search(
-                              height: height * 0.0197,
-                              width: width * 0.0426,
-                            ),
-                          ),
-                          hintText: 'Search address, or near you ',
-                          hintStyle:
-                              AppTextStyle.textStyleSmall(width, Colors.grey),
-                          border: const OutlineInputBorder(
-                            borderSide: BorderSide.none,
-                          ),
-                        ),
-                      ),
-                    ),
-                    CustomButton(
-                      width: width * 0.128,
-                      height: height * 0.0591,
-                      radius: 12,
-                      bg1: AppColors.blueLight,
-                      bg2: AppColors.blue,
-                      content: AppIcons.filter(
-                        height: height * 0.0197,
-                        width: width * 0.0426,
-                      ),
-                      onTap: () {},
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(
-                  bottom: height * 0.0333,
-                  left: width * 0.05,
-                  right: width * 0.05,
-                ), // 27px,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CustomButton(
-                      width: width * 0.1840, // 37px
-                      height: height * 0.0419, //14px
-                      radius: 10,
-                      bg1: selectedCategory == Category.house
-                          ? AppColors.blueLight
-                          : AppColors.white,
-                      bg2: selectedCategory == Category.house
-                          ? AppColors.blue
-                          : AppColors.white,
-                      content: Text(
-                        "House",
-                        style: selectedCategory == Category.house
-                            ? AppTextStyle.textStyleSmall(
-                                width, AppColors.white)
-                            : AppTextStyle.textStyleSmall(
-                                width, AppColors.greyDark),
-                      ),
-                      onTap: () {
-                        setState(() {
-                          selectedCategory = Category.house;
-                        });
-                      },
-                    ),
-                    CustomButton(
-                      width: width * 0.22, // 37px
-                      height: height * 0.0419, //14px
-                      radius: 10,
-                      bg1: selectedCategory == Category.apartment
-                          ? AppColors.blueLight
-                          : AppColors.white,
-                      bg2: selectedCategory == Category.apartment
-                          ? AppColors.blue
-                          : AppColors.white,
-                      content: Text(
-                        "Apartment",
-                        style: selectedCategory == Category.apartment
-                            ? AppTextStyle.textStyleSmall(
-                                width, AppColors.white)
-                            : AppTextStyle.textStyleSmall(
-                                width, AppColors.greyDark),
-                      ),
-                      onTap: () {
-                        setState(() {
-                          selectedCategory = Category.apartment;
-                        });
-                      },
-                    ),
-                    CustomButton(
-                      width: width * 0.1840, // 37px
-                      height: height * 0.0419, //14px
-                      radius: 10,
-                      bg1: selectedCategory == Category.hotel
-                          ? AppColors.blueLight
-                          : AppColors.white,
-                      bg2: selectedCategory == Category.hotel
-                          ? AppColors.blue
-                          : AppColors.white,
-                      content: Text(
-                        "Hotel",
-                        style: selectedCategory == Category.hotel
-                            ? AppTextStyle.textStyleSmall(
-                                width, AppColors.white)
-                            : AppTextStyle.textStyleSmall(
-                                width, AppColors.greyDark),
-                      ),
-                      onTap: () {
-                        setState(() {
-                          selectedCategory = Category.hotel;
-                        });
-                      },
-                    ),
-                    CustomButton(
-                      width: width * 0.1840, // 37px
-                      height: height * 0.0419, //14px
-                      radius: 10,
-                      bg1: selectedCategory == Category.villa
-                          ? AppColors.blueLight
-                          : AppColors.white,
-                      bg2: selectedCategory == Category.villa
-                          ? AppColors.blue
-                          : AppColors.white,
-                      content: Text(
-                        "Villa",
-                        style: selectedCategory == Category.villa
-                            ? AppTextStyle.textStyleSmall(
-                                width, AppColors.white)
-                            : AppTextStyle.textStyleSmall(
-                                width, AppColors.greyDark),
-                      ),
-                      onTap: () {
-                        setState(() {
-                          selectedCategory = Category.villa;
-                        });
-                      },
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(
-                  bottom: height * 0.018,
-                  left: width * 0.05,
-                  right: width * 0.05,
-                ), // 24px
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Near from you",
-                      style:
-                          AppTextStyle.textStyleMedium(width, AppColors.black),
-                    ),
-                    CustomButton(
-                        width: width * 0.2,
-                        height: height * 0.0419,
-                        content: Text(
-                          "See more",
-                          style: AppTextStyle.textStyleSmall(
-                              width, AppColors.greyDark),
-                        ),
-                        onTap: () {})
-                  ],
-                ),
-              ),
+              Header(height: height, width: width),
+              SearchAndFilter(height: height, width: width),
+              CategoryList(height, width, setState),
+              SubHeader(
+                  title: "Near from you",
+                  seeMore: "See more",
+                  height: height,
+                  width: width),
               Container(
                 width: width,
                 height: height * 0.3350,
@@ -473,31 +259,11 @@ class _HomePageState extends State<HomePage> {
                   },
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(
-                  left: width * 0.05,
-                  right: width * 0.05,
-                ), // 24px
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Best for you",
-                      style:
-                          AppTextStyle.textStyleMedium(width, AppColors.black),
-                    ),
-                    CustomButton(
-                        width: width * 0.2,
-                        height: height * 0.0419,
-                        content: Text(
-                          "See more",
-                          style: AppTextStyle.textStyleSmall(
-                              width, AppColors.greyDark),
-                        ),
-                        onTap: () {})
-                  ],
-                ),
-              ),
+              SubHeader(
+                  title: "Best for you",
+                  seeMore: "See more",
+                  height: height,
+                  width: width),
               Expanded(
                 child: Container(
                   width: width,
