@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 class HelpScreen extends StatefulWidget {
-  const HelpScreen({Key? key}) : super(key: key);
+  const HelpScreen({super.key});
 
   @override
-  _HelpScreenState createState() => _HelpScreenState();
+  HelpScreenState createState() => HelpScreenState();
 }
 
-class _HelpScreenState extends State<HelpScreen> {
+class HelpScreenState extends State<HelpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
+      body: const Center(
         child: Text("Help"),
       ),
     );

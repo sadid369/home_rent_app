@@ -1,12 +1,11 @@
-import 'package:home_rent/constants/app_images.dart';
-
 import '../features/home/domain/models/house.dart';
 
 List<House> housesNearby = [
   House(
     id: '1',
     name: 'Dreamsville House',
-    image: AppImages.dreamsvilleHouse,
+    image:
+        "https://s3-alpha-sig.figma.com/img/c0b5/b84e/e1d4028e9f2ad18d455cc20f8f30bcce?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LMUYS97ctXMaCuyMTpq687YW5r8BMFhx35H1hW0jkXKAB8kNvFFsVy-SbniU75JZzn3~AuTQYdrpiOW8uIEua2EptDwoV4dMkNanm8msPfC5iNl~SSw4-UV7VxvGG~5VOVYGBgAF~lX8WSEqKfGz60HEmc5QWeNl88i2V7Wn3nsWHUjFbTEuKOIrvbvP3IRAe2eTegl90y10tEUVNJ--gkQsM6m4jz6D2HpOrYIy2pUGLoCAPcToeBCgdMO4ARDKatE0hV5v3MJfCKvGTZNN~CzYefYYl8acylFdaGt9EwUWWBJOrdk2GhmtO-0MtlV5fsVmffzb69tqgHbYzU0rWQ__",
     gallery: [
       "https://s3-alpha-sig.figma.com/img/0682/1532/d5809aa9ac94ac1f23aa7f090ac62c4b?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qw7slfKJIzvJ4XTmWQKJIuAmFz5puT8uGUwjjMhHzdHhbIG437E~G3Jwp1goB5iF~GuR5LbUBoXLjAjMIdvdStKKfbk7SCJCcWq9s~bDNbMMCiYGr-kOsbuzHuvWO0UD9GMUSkO8s9frKaLakEeQQGjnPA1PqSIvtEUJoPL8WtX1NSf-oB5yEzYsIrMr-neg9Dre9RAsgWDY1e0ne0dN~CcxzfnRsqmC0uNNT57E2LzlfWUmj32sSKrzV3Olj2qmODtAF8ppgDX2d~H2Yu894ega1muHnSVJot0NdjZMSnSYc3XZeAs9t6l0PlV7iiRHChrCXYgrrhB5Id-Bajz4mg__",
       "https://s3-alpha-sig.figma.com/img/b63e/f9e2/335b2715fb1ccc3611772d4967a699b3?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lm7MQb791WMG93-tvfdIaG27-lwCCsEDb7v9JRqkKHnKYnn4-zQdxZn3RRJWxvsRX1DcSt3dQj9jp42fMUc69Hfvw6-agCc-oHSdr~03SIfxEVgKq3-72b2UXEqPT43OrbPKgE4v9aiuqruVwnr3TiQ5wzD4fB4xSYx13xu0f~DvPDFx5yg0l8wIs3zQFLtNF2gAvICy3xR4UjrM2t6ULtnW3JU-eDb2cOPJo4ffBONc-XI7X~E6sBtO4fkmOkBE~ljVPau7NVX4S0Qj9eqBxHgSEIRPBLHiKR4wo-CON0vxNxVRGasWPMlR1P8eqrN4zwpBexQV8pZsh5UPVkjXZA__",
@@ -29,12 +28,14 @@ List<House> housesNearby = [
     ownerName: 'Garry Allen',
     ownerEmail: 'john@example.com',
     ownerPhone: '555-1234',
-    ownerImage: AppImages.ownerImage,
+    ownerImage:
+        "https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ),
   House(
     id: '2',
     name: 'Ascot House',
-    image: AppImages.ascotsHouse,
+    image:
+        "https://s3-alpha-sig.figma.com/img/fc2a/22eb/77b12515a6310130b669ed3062ff9bd9?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=L3YOenXcvUC85drj1LRsp1viRiCJj1zAXssrkcojs3JiY6q-skSU7~PMfuOROSb4-EaMelVAoF8B77C0OnHkTkVh93OT9SBOtyHdX56y70ah0SlhKpmYO46KMAj~6T8GJ5PezPjN2BgMKDd~OCh5aJuBNYSYkewnVFYW4xtLFAFdm5Wr2e0R-TaThYttqK3QvgpzEy1AnS7YUPzdVCSkRqsl9~UyLMdLyylwemW4S34puvR31sygi4XURfZC7pMU1KUbWgRKjntDFlitfxlx7SoTWjBUiSc7El2Ybjrlw0BYX-XtlTQJ-vApZzDUbVFBFlOVHoxLkW7OibTqOXVHmQ__",
     gallery: [
       "https://s3-alpha-sig.figma.com/img/0682/1532/d5809aa9ac94ac1f23aa7f090ac62c4b?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qw7slfKJIzvJ4XTmWQKJIuAmFz5puT8uGUwjjMhHzdHhbIG437E~G3Jwp1goB5iF~GuR5LbUBoXLjAjMIdvdStKKfbk7SCJCcWq9s~bDNbMMCiYGr-kOsbuzHuvWO0UD9GMUSkO8s9frKaLakEeQQGjnPA1PqSIvtEUJoPL8WtX1NSf-oB5yEzYsIrMr-neg9Dre9RAsgWDY1e0ne0dN~CcxzfnRsqmC0uNNT57E2LzlfWUmj32sSKrzV3Olj2qmODtAF8ppgDX2d~H2Yu894ega1muHnSVJot0NdjZMSnSYc3XZeAs9t6l0PlV7iiRHChrCXYgrrhB5Id-Bajz4mg__",
       "https://s3-alpha-sig.figma.com/img/b63e/f9e2/335b2715fb1ccc3611772d4967a699b3?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lm7MQb791WMG93-tvfdIaG27-lwCCsEDb7v9JRqkKHnKYnn4-zQdxZn3RRJWxvsRX1DcSt3dQj9jp42fMUc69Hfvw6-agCc-oHSdr~03SIfxEVgKq3-72b2UXEqPT43OrbPKgE4v9aiuqruVwnr3TiQ5wzD4fB4xSYx13xu0f~DvPDFx5yg0l8wIs3zQFLtNF2gAvICy3xR4UjrM2t6ULtnW3JU-eDb2cOPJo4ffBONc-XI7X~E6sBtO4fkmOkBE~ljVPau7NVX4S0Qj9eqBxHgSEIRPBLHiKR4wo-CON0vxNxVRGasWPMlR1P8eqrN4zwpBexQV8pZsh5UPVkjXZA__",
@@ -57,12 +58,14 @@ List<House> housesNearby = [
     ownerName: 'Garry Allen',
     ownerEmail: 'john@example.com',
     ownerPhone: '555-1234',
-    ownerImage: AppImages.ownerImage,
+    ownerImage:
+        "https://s3-alpha-sig.figma.com/img/ebd1/f255/26652d4ef5745a41a8c6cceaaa96ffac?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lYvetxiMTdWpAyoxJP6cl6rXJM4xBmpYKu8b2SkBN0AY9GApWrL573C34s34QgbnTzVbnhh8aEtJC689kju1tStHSMCrwR9muZv-nD0CG1gduFQwdo43JPYkEdqxLiBFbf3sJMDzecvdNXvjOi2OaqOh8b15ZpMniOXCWXfIou2a6n3LRH4SUnJA--4XMq9n2kBwTb1xN~25duZcqomsLbeRnA1IZRylKyUd8cQG1w2xfngUMETfegPZDSU2dD5pvJeDXS10otaeEdWMi-43MEwpymI3kbY6D7TxVOX8KEj504GWGusx43LWstpF6jcIWqb1lxr9ArQQoD5dimpt~A__",
   ),
   House(
     id: '3',
     name: 'Dreamsville House',
-    image: AppImages.seaBreezes,
+    image:
+        "https://s3-alpha-sig.figma.com/img/fc2a/22eb/77b12515a6310130b669ed3062ff9bd9?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=L3YOenXcvUC85drj1LRsp1viRiCJj1zAXssrkcojs3JiY6q-skSU7~PMfuOROSb4-EaMelVAoF8B77C0OnHkTkVh93OT9SBOtyHdX56y70ah0SlhKpmYO46KMAj~6T8GJ5PezPjN2BgMKDd~OCh5aJuBNYSYkewnVFYW4xtLFAFdm5Wr2e0R-TaThYttqK3QvgpzEy1AnS7YUPzdVCSkRqsl9~UyLMdLyylwemW4S34puvR31sygi4XURfZC7pMU1KUbWgRKjntDFlitfxlx7SoTWjBUiSc7El2Ybjrlw0BYX-XtlTQJ-vApZzDUbVFBFlOVHoxLkW7OibTqOXVHmQ__",
     gallery: [
       "https://s3-alpha-sig.figma.com/img/0682/1532/d5809aa9ac94ac1f23aa7f090ac62c4b?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qw7slfKJIzvJ4XTmWQKJIuAmFz5puT8uGUwjjMhHzdHhbIG437E~G3Jwp1goB5iF~GuR5LbUBoXLjAjMIdvdStKKfbk7SCJCcWq9s~bDNbMMCiYGr-kOsbuzHuvWO0UD9GMUSkO8s9frKaLakEeQQGjnPA1PqSIvtEUJoPL8WtX1NSf-oB5yEzYsIrMr-neg9Dre9RAsgWDY1e0ne0dN~CcxzfnRsqmC0uNNT57E2LzlfWUmj32sSKrzV3Olj2qmODtAF8ppgDX2d~H2Yu894ega1muHnSVJot0NdjZMSnSYc3XZeAs9t6l0PlV7iiRHChrCXYgrrhB5Id-Bajz4mg__",
       "https://s3-alpha-sig.figma.com/img/b63e/f9e2/335b2715fb1ccc3611772d4967a699b3?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lm7MQb791WMG93-tvfdIaG27-lwCCsEDb7v9JRqkKHnKYnn4-zQdxZn3RRJWxvsRX1DcSt3dQj9jp42fMUc69Hfvw6-agCc-oHSdr~03SIfxEVgKq3-72b2UXEqPT43OrbPKgE4v9aiuqruVwnr3TiQ5wzD4fB4xSYx13xu0f~DvPDFx5yg0l8wIs3zQFLtNF2gAvICy3xR4UjrM2t6ULtnW3JU-eDb2cOPJo4ffBONc-XI7X~E6sBtO4fkmOkBE~ljVPau7NVX4S0Qj9eqBxHgSEIRPBLHiKR4wo-CON0vxNxVRGasWPMlR1P8eqrN4zwpBexQV8pZsh5UPVkjXZA__",
@@ -85,14 +88,16 @@ List<House> housesNearby = [
     ownerName: 'Garry Allen',
     ownerEmail: 'john@example.com',
     ownerPhone: '555-1234',
-    ownerImage: AppImages.ownerImage,
+    ownerImage:
+        "https://s3-alpha-sig.figma.com/img/ebd1/f255/26652d4ef5745a41a8c6cceaaa96ffac?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lYvetxiMTdWpAyoxJP6cl6rXJM4xBmpYKu8b2SkBN0AY9GApWrL573C34s34QgbnTzVbnhh8aEtJC689kju1tStHSMCrwR9muZv-nD0CG1gduFQwdo43JPYkEdqxLiBFbf3sJMDzecvdNXvjOi2OaqOh8b15ZpMniOXCWXfIou2a6n3LRH4SUnJA--4XMq9n2kBwTb1xN~25duZcqomsLbeRnA1IZRylKyUd8cQG1w2xfngUMETfegPZDSU2dD5pvJeDXS10otaeEdWMi-43MEwpymI3kbY6D7TxVOX8KEj504GWGusx43LWstpF6jcIWqb1lxr9ArQQoD5dimpt~A__",
   ),
 ];
 List<House> bestForYou = [
   House(
     id: '1',
     name: 'Dreamsville House',
-    image: AppImages.orchadHouse,
+    image:
+        "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVudGFsJTIwaG91c2V8ZW58MHx8MHx8fDA%3D",
     gallery: [
       "https://s3-alpha-sig.figma.com/img/0682/1532/d5809aa9ac94ac1f23aa7f090ac62c4b?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qw7slfKJIzvJ4XTmWQKJIuAmFz5puT8uGUwjjMhHzdHhbIG437E~G3Jwp1goB5iF~GuR5LbUBoXLjAjMIdvdStKKfbk7SCJCcWq9s~bDNbMMCiYGr-kOsbuzHuvWO0UD9GMUSkO8s9frKaLakEeQQGjnPA1PqSIvtEUJoPL8WtX1NSf-oB5yEzYsIrMr-neg9Dre9RAsgWDY1e0ne0dN~CcxzfnRsqmC0uNNT57E2LzlfWUmj32sSKrzV3Olj2qmODtAF8ppgDX2d~H2Yu894ega1muHnSVJot0NdjZMSnSYc3XZeAs9t6l0PlV7iiRHChrCXYgrrhB5Id-Bajz4mg__",
       "https://s3-alpha-sig.figma.com/img/b63e/f9e2/335b2715fb1ccc3611772d4967a699b3?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lm7MQb791WMG93-tvfdIaG27-lwCCsEDb7v9JRqkKHnKYnn4-zQdxZn3RRJWxvsRX1DcSt3dQj9jp42fMUc69Hfvw6-agCc-oHSdr~03SIfxEVgKq3-72b2UXEqPT43OrbPKgE4v9aiuqruVwnr3TiQ5wzD4fB4xSYx13xu0f~DvPDFx5yg0l8wIs3zQFLtNF2gAvICy3xR4UjrM2t6ULtnW3JU-eDb2cOPJo4ffBONc-XI7X~E6sBtO4fkmOkBE~ljVPau7NVX4S0Qj9eqBxHgSEIRPBLHiKR4wo-CON0vxNxVRGasWPMlR1P8eqrN4zwpBexQV8pZsh5UPVkjXZA__",
@@ -115,12 +120,14 @@ List<House> bestForYou = [
     ownerName: 'Garry Allen',
     ownerEmail: 'john@example.com',
     ownerPhone: '555-1234',
-    ownerImage: AppImages.ownerImage,
+    ownerImage:
+        "https://s3-alpha-sig.figma.com/img/ebd1/f255/26652d4ef5745a41a8c6cceaaa96ffac?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lYvetxiMTdWpAyoxJP6cl6rXJM4xBmpYKu8b2SkBN0AY9GApWrL573C34s34QgbnTzVbnhh8aEtJC689kju1tStHSMCrwR9muZv-nD0CG1gduFQwdo43JPYkEdqxLiBFbf3sJMDzecvdNXvjOi2OaqOh8b15ZpMniOXCWXfIou2a6n3LRH4SUnJA--4XMq9n2kBwTb1xN~25duZcqomsLbeRnA1IZRylKyUd8cQG1w2xfngUMETfegPZDSU2dD5pvJeDXS10otaeEdWMi-43MEwpymI3kbY6D7TxVOX8KEj504GWGusx43LWstpF6jcIWqb1lxr9ArQQoD5dimpt~A__",
   ),
   House(
     id: '2',
     name: 'The Hollies House',
-    image: AppImages.holliesHouse,
+    image:
+        "https://images.unsplash.com/photo-1485996463739-9cb09adbe6c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVudGFsJTIwaG91c2V8ZW58MHx8MHx8fDA%3D",
     gallery: [
       "https://s3-alpha-sig.figma.com/img/0682/1532/d5809aa9ac94ac1f23aa7f090ac62c4b?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qw7slfKJIzvJ4XTmWQKJIuAmFz5puT8uGUwjjMhHzdHhbIG437E~G3Jwp1goB5iF~GuR5LbUBoXLjAjMIdvdStKKfbk7SCJCcWq9s~bDNbMMCiYGr-kOsbuzHuvWO0UD9GMUSkO8s9frKaLakEeQQGjnPA1PqSIvtEUJoPL8WtX1NSf-oB5yEzYsIrMr-neg9Dre9RAsgWDY1e0ne0dN~CcxzfnRsqmC0uNNT57E2LzlfWUmj32sSKrzV3Olj2qmODtAF8ppgDX2d~H2Yu894ega1muHnSVJot0NdjZMSnSYc3XZeAs9t6l0PlV7iiRHChrCXYgrrhB5Id-Bajz4mg__",
       "https://s3-alpha-sig.figma.com/img/b63e/f9e2/335b2715fb1ccc3611772d4967a699b3?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lm7MQb791WMG93-tvfdIaG27-lwCCsEDb7v9JRqkKHnKYnn4-zQdxZn3RRJWxvsRX1DcSt3dQj9jp42fMUc69Hfvw6-agCc-oHSdr~03SIfxEVgKq3-72b2UXEqPT43OrbPKgE4v9aiuqruVwnr3TiQ5wzD4fB4xSYx13xu0f~DvPDFx5yg0l8wIs3zQFLtNF2gAvICy3xR4UjrM2t6ULtnW3JU-eDb2cOPJo4ffBONc-XI7X~E6sBtO4fkmOkBE~ljVPau7NVX4S0Qj9eqBxHgSEIRPBLHiKR4wo-CON0vxNxVRGasWPMlR1P8eqrN4zwpBexQV8pZsh5UPVkjXZA__",
@@ -143,12 +150,14 @@ List<House> bestForYou = [
     ownerName: 'Garry Allen',
     ownerEmail: 'john@example.com',
     ownerPhone: '555-1234',
-    ownerImage: AppImages.ownerImage,
+    ownerImage:
+        "https://s3-alpha-sig.figma.com/img/ebd1/f255/26652d4ef5745a41a8c6cceaaa96ffac?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lYvetxiMTdWpAyoxJP6cl6rXJM4xBmpYKu8b2SkBN0AY9GApWrL573C34s34QgbnTzVbnhh8aEtJC689kju1tStHSMCrwR9muZv-nD0CG1gduFQwdo43JPYkEdqxLiBFbf3sJMDzecvdNXvjOi2OaqOh8b15ZpMniOXCWXfIou2a6n3LRH4SUnJA--4XMq9n2kBwTb1xN~25duZcqomsLbeRnA1IZRylKyUd8cQG1w2xfngUMETfegPZDSU2dD5pvJeDXS10otaeEdWMi-43MEwpymI3kbY6D7TxVOX8KEj504GWGusx43LWstpF6jcIWqb1lxr9ArQQoD5dimpt~A__",
   ),
   House(
     id: '2',
     name: 'Sea Breezes House',
-    image: AppImages.seaBreezes,
+    image:
+        "https://images.unsplash.com/photo-1485996463739-9cb09adbe6c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVudGFsJTIwaG91c2V8ZW58MHx8MHx8fDA%3D",
     gallery: [
       "https://s3-alpha-sig.figma.com/img/0682/1532/d5809aa9ac94ac1f23aa7f090ac62c4b?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=qw7slfKJIzvJ4XTmWQKJIuAmFz5puT8uGUwjjMhHzdHhbIG437E~G3Jwp1goB5iF~GuR5LbUBoXLjAjMIdvdStKKfbk7SCJCcWq9s~bDNbMMCiYGr-kOsbuzHuvWO0UD9GMUSkO8s9frKaLakEeQQGjnPA1PqSIvtEUJoPL8WtX1NSf-oB5yEzYsIrMr-neg9Dre9RAsgWDY1e0ne0dN~CcxzfnRsqmC0uNNT57E2LzlfWUmj32sSKrzV3Olj2qmODtAF8ppgDX2d~H2Yu894ega1muHnSVJot0NdjZMSnSYc3XZeAs9t6l0PlV7iiRHChrCXYgrrhB5Id-Bajz4mg__",
       "https://s3-alpha-sig.figma.com/img/b63e/f9e2/335b2715fb1ccc3611772d4967a699b3?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lm7MQb791WMG93-tvfdIaG27-lwCCsEDb7v9JRqkKHnKYnn4-zQdxZn3RRJWxvsRX1DcSt3dQj9jp42fMUc69Hfvw6-agCc-oHSdr~03SIfxEVgKq3-72b2UXEqPT43OrbPKgE4v9aiuqruVwnr3TiQ5wzD4fB4xSYx13xu0f~DvPDFx5yg0l8wIs3zQFLtNF2gAvICy3xR4UjrM2t6ULtnW3JU-eDb2cOPJo4ffBONc-XI7X~E6sBtO4fkmOkBE~ljVPau7NVX4S0Qj9eqBxHgSEIRPBLHiKR4wo-CON0vxNxVRGasWPMlR1P8eqrN4zwpBexQV8pZsh5UPVkjXZA__",
@@ -171,6 +180,7 @@ List<House> bestForYou = [
     ownerName: 'Garry Allen',
     ownerEmail: 'john@example.com',
     ownerPhone: '555-1234',
-    ownerImage: AppImages.ownerImage,
+    ownerImage:
+        "https://s3-alpha-sig.figma.com/img/ebd1/f255/26652d4ef5745a41a8c6cceaaa96ffac?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lYvetxiMTdWpAyoxJP6cl6rXJM4xBmpYKu8b2SkBN0AY9GApWrL573C34s34QgbnTzVbnhh8aEtJC689kju1tStHSMCrwR9muZv-nD0CG1gduFQwdo43JPYkEdqxLiBFbf3sJMDzecvdNXvjOi2OaqOh8b15ZpMniOXCWXfIou2a6n3LRH4SUnJA--4XMq9n2kBwTb1xN~25duZcqomsLbeRnA1IZRylKyUd8cQG1w2xfngUMETfegPZDSU2dD5pvJeDXS10otaeEdWMi-43MEwpymI3kbY6D7TxVOX8KEj504GWGusx43LWstpF6jcIWqb1lxr9ArQQoD5dimpt~A__",
   ),
 ];

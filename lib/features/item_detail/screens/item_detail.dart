@@ -10,7 +10,6 @@ import '../../../constants/app_colors.dart';
 import '../../../constants/app_icons.dart';
 import '../../../constants/app_text_style.dart';
 import '../../home/domain/models/house.dart';
-import 'package:google_maps_flutter_android/google_maps_flutter_android.dart';
 import 'package:google_maps_flutter_platform_interface/google_maps_flutter_platform_interface.dart';
 
 class ItemDetail extends StatefulWidget {
@@ -23,7 +22,7 @@ class ItemDetail extends StatefulWidget {
 
 class ItemDetailState extends State<ItemDetail> {
   GoogleMapController? _controller;
-  Set<Marker> _markers = {};
+  final Set<Marker> _markers = {};
   void onMapCreated(GoogleMapController controller) {
     _controller = controller;
     setState(() {
@@ -60,7 +59,7 @@ class ItemDetailState extends State<ItemDetail> {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage(widget.house.image),
+                  image: NetworkImage(widget.house.image),
                 ),
                 borderRadius: BorderRadius.circular(20),
               ),
@@ -125,7 +124,7 @@ class ItemDetailState extends State<ItemDetail> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          '${widget.house.name}',
+                          widget.house.name,
                           style: AppTextStyle.textStyleMedium(
                             width,
                             AppColors.white,
@@ -279,28 +278,47 @@ class ItemDetailState extends State<ItemDetail> {
                   Row(
                     children: [
                       Container(
-                        width: width * 0.1067,
-                        height: height * 0.0493,
-                        decoration: BoxDecoration(
-                          color: AppColors.greyExtraLight3,
-                          image: DecorationImage(
-                            image: AssetImage(
+                          width: width * 0.1067,
+                          height: height * 0.0493,
+                          // decoration: BoxDecoration(
+                          //   color: AppColors.greyExtraLight3,
+                          //   image: DecorationImage(
+                          //     image: AssetImage(
+                          //       widget.house.ownerImage,
+                          //     ),
+                          //     fit: BoxFit.contain,
+                          //   ),
+                          //   borderRadius: BorderRadius.circular(
+                          //       50), //border radius of 50% of shortest side
+                          // ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(150),
+                            child: Image.network(
                               widget.house.ownerImage,
+                              fit: BoxFit.cover,
+                              loadingBuilder:
+                                  (context, child, loadingProgress) {
+                                if (loadingProgress == null) return child;
+                                return Center(
+                                    child: CircularProgressIndicator(
+                                  color: AppColors.blue,
+                                  value: loadingProgress.expectedTotalBytes !=
+                                          null
+                                      ? loadingProgress.cumulativeBytesLoaded /
+                                          loadingProgress.expectedTotalBytes!
+                                      : null,
+                                ));
+                              },
                             ),
-                            fit: BoxFit.contain,
-                          ),
-                          borderRadius: BorderRadius.circular(
-                              50), //border radius of 50% of shortest side
-                        ),
-                      ),
+                          )),
                       SizedBox(
                         width: width * 0.04,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('${widget.house.ownerName}'),
-                          Text('Owner'),
+                          Text(widget.house.ownerName),
+                          const Text('Owner'),
                         ],
                       ),
                     ],
@@ -365,6 +383,9 @@ class ItemDetailState extends State<ItemDetail> {
                         width: width * 0.88,
                         height: height * 0.1,
                         child: GalleryImage(
+                          loadingWidget: CircularProgressIndicator(
+                            color: AppColors.blue,
+                          ),
                           imageUrls: widget.house.gallery,
                           numOfShowImages: 4,
                           crossAxisCount: 4,
@@ -408,6 +429,7 @@ class ItemDetailState extends State<ItemDetail> {
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -420,11 +442,11 @@ class ItemDetailState extends State<ItemDetail> {
                         ),
                       ),
                       SizedBox(
-                        height: height * 0.01,
+                        height: width * 0.01,
                       ),
                       Text(
                         "${widget.house.price}",
-                        style: AppTextStyle.textStyleMedium(
+                        style: AppTextStyle.textStyleSmall(
                           width,
                           AppColors.black,
                         ),

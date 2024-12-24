@@ -28,13 +28,23 @@ class ItemCard extends StatelessWidget {
           Container(
             width: width * 0.1973,
             height: height * 0.0862,
-            // margin: EdgeInsets.only(right: width * 0.0427),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(bestForYou[index].image),
-              ),
+            child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
+              child: Image.network(
+                bestForYou[index].image,
+                fit: BoxFit.cover,
+                loadingBuilder: (context, child, loadingProgress) {
+                  if (loadingProgress == null) return child;
+                  return Center(
+                      child: CircularProgressIndicator(
+                    color: AppColors.blue,
+                    value: loadingProgress.expectedTotalBytes != null
+                        ? loadingProgress.cumulativeBytesLoaded /
+                            loadingProgress.expectedTotalBytes!
+                        : null,
+                  ));
+                },
+              ),
             ),
           ),
           SizedBox(width: width * 0.04),

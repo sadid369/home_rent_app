@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 class BookmarkScreen extends StatefulWidget {
-  const BookmarkScreen({Key? key}) : super(key: key);
+  const BookmarkScreen({super.key});
 
   @override
-  _BookmarkScreenState createState() => _BookmarkScreenState();
+  BookmarkScreenState createState() => BookmarkScreenState();
 }
 
-class _BookmarkScreenState extends State<BookmarkScreen> {
+class BookmarkScreenState extends State<BookmarkScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
+      body: const Center(
         child: Text("Bookmark"),
       ),
     );

@@ -1,8 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
-import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
 import 'package:get/get.dart';
 
 import 'package:home_rent/helper/routes_helper.dart';
@@ -34,179 +32,177 @@ class _HomePageState extends State<HomePage> {
 
     return AdvancedDrawer(
       drawer: SafeArea(
-        child: Container(
-          child: ListTileTheme(
-            selectedTileColor: AppColors.white,
-            textColor: Colors.white,
-            iconColor: Colors.white,
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                SizedBox(
-                  height: height * 0.2,
+        child: ListTileTheme(
+          selectedTileColor: AppColors.white,
+          textColor: Colors.white,
+          iconColor: Colors.white,
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              SizedBox(
+                height: height * 0.1,
+              ),
+              ListTile(
+                onTap: () {},
+                leading: AppIcons.home(
+                  color: Colors.white,
+                  width: width * 0.0427,
+                  height: height * 0.0205,
                 ),
-                ListTile(
-                  onTap: () {},
-                  leading: AppIcons.home(
+                title: Text(
+                  'Home',
+                  style: AppTextStyle.textStyleMedium(width, Colors.white),
+                ),
+              ),
+              SizedBox(
+                height: height * 0.002,
+              ),
+              ListTile(
+                onTap: () {
+                  Get.toNamed(RoutesHelper.profile);
+                },
+                leading: AppIcons.profile(
+                  color: Colors.white,
+                  width: width * 0.0427,
+                  height: height * 0.0205,
+                ),
+                title: Text('Profile',
+                    style: AppTextStyle.textStyleMedium(width, Colors.white)),
+              ),
+              SizedBox(
+                height: height * 0.002,
+              ),
+              ListTile(
+                onTap: () {
+                  Get.toNamed(RoutesHelper.nearby);
+                },
+                leading: AppIcons.location(
+                  color: Colors.white,
+                  width: width * 0.0427,
+                  height: height * 0.0205,
+                ),
+                title: Text('Nearby',
+                    style: AppTextStyle.textStyleMedium(width, Colors.white)),
+              ),
+              SizedBox(
+                height: height * 0.002,
+              ),
+              Divider(
+                color: AppColors.white,
+                endIndent: width * 0.35,
+              ),
+              SizedBox(
+                height: height * 0.002,
+              ),
+              ListTile(
+                onTap: () {
+                  Get.toNamed(RoutesHelper.bookmark);
+                },
+                leading: AppIcons.save(
+                  color: Colors.white,
+                  width: width * 0.0427,
+                  height: height * 0.0205,
+                ),
+                title: Text(
+                  'Bookmark',
+                  style: AppTextStyle.textStyleMedium(width, Colors.white),
+                ),
+              ),
+              SizedBox(
+                height: height * 0.002,
+              ),
+              ListTile(
+                onTap: () {
+                  Get.toNamed(RoutesHelper.notification);
+                },
+                leading: Badge(
+                  child: AppIcons.notification(
                     color: Colors.white,
                     width: width * 0.0427,
                     height: height * 0.0205,
                   ),
-                  title: Text(
-                    'Home',
-                    style: AppTextStyle.textStyleMedium(width, Colors.white),
-                  ),
                 ),
-                SizedBox(
-                  height: height * 0.002,
+                title: Text(
+                  'Notification',
+                  style: AppTextStyle.textStyleMedium(width, Colors.white),
                 ),
-                ListTile(
-                  onTap: () {
-                    Get.toNamed(RoutesHelper.profile);
-                  },
-                  leading: AppIcons.profile(
+              ),
+              SizedBox(
+                height: height * 0.002,
+              ),
+              ListTile(
+                onTap: () {
+                  Get.toNamed(RoutesHelper.message);
+                },
+                leading: Badge(
+                  child: AppIcons.notification(
                     color: Colors.white,
                     width: width * 0.0427,
                     height: height * 0.0205,
                   ),
-                  title: Text('Profile',
-                      style: AppTextStyle.textStyleMedium(width, Colors.white)),
                 ),
-                SizedBox(
-                  height: height * 0.002,
+                title: Text(
+                  'Message',
+                  style: AppTextStyle.textStyleMedium(width, Colors.white),
                 ),
-                ListTile(
-                  onTap: () {
-                    Get.toNamed(RoutesHelper.nearby);
-                  },
-                  leading: AppIcons.location(
-                    color: Colors.white,
-                    width: width * 0.0427,
-                    height: height * 0.0205,
-                  ),
-                  title: Text('Nearby',
-                      style: AppTextStyle.textStyleMedium(width, Colors.white)),
+              ),
+              SizedBox(
+                height: height * 0.002,
+              ),
+              Divider(
+                color: AppColors.white,
+                endIndent: width * 0.35,
+              ),
+              SizedBox(
+                height: height * 0.002,
+              ),
+              ListTile(
+                onTap: () {
+                  Get.toNamed(RoutesHelper.setting);
+                },
+                leading: AppIcons.setting(
+                  color: Colors.white,
+                  width: width * 0.0427,
+                  height: height * 0.0205,
                 ),
-                SizedBox(
-                  height: height * 0.002,
+                title: Text(
+                  'Setting',
+                  style: AppTextStyle.textStyleMedium(width, Colors.white),
                 ),
-                Divider(
-                  color: AppColors.white,
-                  endIndent: width * 0.35,
+              ),
+              SizedBox(
+                height: height * 0.002,
+              ),
+              ListTile(
+                onTap: () {
+                  Get.toNamed(RoutesHelper.help);
+                },
+                leading: AppIcons.help(
+                  color: Colors.white,
+                  width: width * 0.0427,
+                  height: height * 0.0205,
                 ),
-                SizedBox(
-                  height: height * 0.002,
+                title: Text(
+                  'Help',
+                  style: AppTextStyle.textStyleMedium(width, Colors.white),
                 ),
-                ListTile(
-                  onTap: () {
-                    Get.toNamed(RoutesHelper.bookmark);
-                  },
-                  leading: AppIcons.save(
-                    color: Colors.white,
-                    width: width * 0.0427,
-                    height: height * 0.0205,
-                  ),
-                  title: Text(
-                    'Bookmark',
-                    style: AppTextStyle.textStyleMedium(width, Colors.white),
-                  ),
+              ),
+              SizedBox(
+                height: height * 0.002,
+              ),
+              ListTile(
+                onTap: () {},
+                leading: AppIcons.logout(
+                  color: Colors.white,
+                  width: width * 0.0427,
+                  height: height * 0.0205,
                 ),
-                SizedBox(
-                  height: height * 0.002,
+                title: Text(
+                  'Logout',
+                  style: AppTextStyle.textStyleMedium(width, Colors.white),
                 ),
-                ListTile(
-                  onTap: () {
-                    Get.toNamed(RoutesHelper.notification);
-                  },
-                  leading: Badge(
-                    child: AppIcons.notification(
-                      color: Colors.white,
-                      width: width * 0.0427,
-                      height: height * 0.0205,
-                    ),
-                  ),
-                  title: Text(
-                    'Notification',
-                    style: AppTextStyle.textStyleMedium(width, Colors.white),
-                  ),
-                ),
-                SizedBox(
-                  height: height * 0.002,
-                ),
-                ListTile(
-                  onTap: () {
-                    Get.toNamed(RoutesHelper.message);
-                  },
-                  leading: Badge(
-                    child: AppIcons.notification(
-                      color: Colors.white,
-                      width: width * 0.0427,
-                      height: height * 0.0205,
-                    ),
-                  ),
-                  title: Text(
-                    'Message',
-                    style: AppTextStyle.textStyleMedium(width, Colors.white),
-                  ),
-                ),
-                SizedBox(
-                  height: height * 0.002,
-                ),
-                Divider(
-                  color: AppColors.white,
-                  endIndent: width * 0.35,
-                ),
-                SizedBox(
-                  height: height * 0.002,
-                ),
-                ListTile(
-                  onTap: () {
-                    Get.toNamed(RoutesHelper.setting);
-                  },
-                  leading: AppIcons.setting(
-                    color: Colors.white,
-                    width: width * 0.0427,
-                    height: height * 0.0205,
-                  ),
-                  title: Text(
-                    'Setting',
-                    style: AppTextStyle.textStyleMedium(width, Colors.white),
-                  ),
-                ),
-                SizedBox(
-                  height: height * 0.002,
-                ),
-                ListTile(
-                  onTap: () {
-                    Get.toNamed(RoutesHelper.help);
-                  },
-                  leading: AppIcons.help(
-                    color: Colors.white,
-                    width: width * 0.0427,
-                    height: height * 0.0205,
-                  ),
-                  title: Text(
-                    'Help',
-                    style: AppTextStyle.textStyleMedium(width, Colors.white),
-                  ),
-                ),
-                SizedBox(
-                  height: height * 0.002,
-                ),
-                ListTile(
-                  onTap: () {},
-                  leading: AppIcons.logout(
-                    color: Colors.white,
-                    width: width * 0.0427,
-                    height: height * 0.0205,
-                  ),
-                  title: Text(
-                    'Logout',
-                    style: AppTextStyle.textStyleMedium(width, Colors.white),
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
@@ -223,7 +219,7 @@ class _HomePageState extends State<HomePage> {
       // openScale: 1.0,
       disabledGestures: false,
       childDecoration: const BoxDecoration(
-        borderRadius: const BorderRadius.all(Radius.circular(16)),
+        borderRadius: BorderRadius.all(Radius.circular(16)),
       ),
       child: Scaffold(
         backgroundColor: AppColors.greyExtraLight,
@@ -285,7 +281,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: Row(
                   children: [
-                    Container(
+                    SizedBox(
                       width: width * 0.75,
                       child: TextField(
                         decoration: InputDecoration(
@@ -356,7 +352,7 @@ class _HomePageState extends State<HomePage> {
                       },
                     ),
                     CustomButton(
-                      width: width * 0.1840, // 37px
+                      width: width * 0.22, // 37px
                       height: height * 0.0419, //14px
                       radius: 10,
                       bg1: selectedCategory == Category.apartment
@@ -376,7 +372,6 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         setState(() {
                           selectedCategory = Category.apartment;
-                          print(selectedCategory);
                         });
                       },
                     ),
@@ -533,8 +528,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _handleMenuButtonPressed() {
-    // NOTICE: Manage Advanced Drawer state through the Controller.
-    // _advancedDrawerController.value = AdvancedDrawerValue.visible();
     _advancedDrawerController.showDrawer();
   }
 }

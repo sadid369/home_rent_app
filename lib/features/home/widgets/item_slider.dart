@@ -26,7 +26,7 @@ class ItemSlider extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage(housesNearby[index].image),
+          image: NetworkImage(housesNearby[index].image),
         ),
         borderRadius: BorderRadius.circular(20),
       ),

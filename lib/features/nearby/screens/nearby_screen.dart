@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 class NearbyScreen extends StatefulWidget {
-  const NearbyScreen({Key? key}) : super(key: key);
+  const NearbyScreen({super.key});
 
   @override
-  _NearbyScreenState createState() => _NearbyScreenState();
+  NearbyScreenState createState() => NearbyScreenState();
 }
 
-class _NearbyScreenState extends State<NearbyScreen> {
+class NearbyScreenState extends State<NearbyScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
+      body: const Center(
         child: Text("Nearby"),
       ),
     );
