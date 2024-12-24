@@ -8,8 +8,8 @@ class House {
   final String address;
   final String price;
   final String description;
-  final double bedrooms;
-  final double bathrooms;
+  final int bedrooms;
+  final int bathrooms;
   final double latitude;
   final double longitude;
   final String ownerName;
