@@ -61,7 +61,9 @@ class _HomePageState extends State<HomePage> {
                   height: height * 0.002,
                 ),
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(RoutesHelper.profile);
+                  },
                   leading: AppIcons.profile(
                     color: Colors.white,
                     width: width * 0.0427,
@@ -74,7 +76,9 @@ class _HomePageState extends State<HomePage> {
                   height: height * 0.002,
                 ),
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(RoutesHelper.nearby);
+                  },
                   leading: AppIcons.location(
                     color: Colors.white,
                     width: width * 0.0427,
@@ -94,7 +98,9 @@ class _HomePageState extends State<HomePage> {
                   height: height * 0.002,
                 ),
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(RoutesHelper.bookmark);
+                  },
                   leading: AppIcons.save(
                     color: Colors.white,
                     width: width * 0.0427,
@@ -109,7 +115,9 @@ class _HomePageState extends State<HomePage> {
                   height: height * 0.002,
                 ),
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(RoutesHelper.notification);
+                  },
                   leading: Badge(
                     child: AppIcons.notification(
                       color: Colors.white,
@@ -126,7 +134,9 @@ class _HomePageState extends State<HomePage> {
                   height: height * 0.002,
                 ),
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(RoutesHelper.message);
+                  },
                   leading: Badge(
                     child: AppIcons.notification(
                       color: Colors.white,
@@ -150,7 +160,9 @@ class _HomePageState extends State<HomePage> {
                   height: height * 0.002,
                 ),
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(RoutesHelper.setting);
+                  },
                   leading: AppIcons.setting(
                     color: Colors.white,
                     width: width * 0.0427,
@@ -165,7 +177,9 @@ class _HomePageState extends State<HomePage> {
                   height: height * 0.002,
                 ),
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(RoutesHelper.help);
+                  },
                   leading: AppIcons.help(
                     color: Colors.white,
                     width: width * 0.0427,
